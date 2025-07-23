@@ -1,69 +1,49 @@
-# React + TypeScript + Vite
+<!-- Replace [YOUR_PORTFOLIO_LOGO_URL] with the URL of your portfolio logo -->
+<!-- <div align="center">
+  <img src="" alt="Portfolio Logo">
+</div> -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Portfolio Web App
 
-Currently, two official plugins are available:
+Welcome to my portfolio web app, showcasing my projects, skills, and experiences! This web application serves as a central hub to highlight my work and provides a way for potential employers or collaborators to get in touch with me.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- 🚀 [Click here to view the final app](https://virajnikam.in) -->
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![React Icon](https://img.icons8.com/color/48/000000/react-native.png)
+![Typescript Icon](https://img.icons8.com/color/48/000000/typescript.png)
+![SCSS Icon](https://img.icons8.com/color/48/000000/sass.png)
+![Firebase Icon](https://img.icons8.com/color/48/000000/firebase.png)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Latest Blogs**
+- **Project Showcase**
+- **Skills and Expertise**
+- **Contact Section**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Setup and Commands
+
+Use the following commands to work with this project:
+
+```bash
+# Install dependencies
+$ npm install
+
+# Run the development server
+$ npm run dev
+
+# Run the production build
+$ npm run start
+
+# Build for production
+$ num run build
+
+# Run unit tests with coverage
+# $ npm run test --coverage
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<!-- <div align="center">
+  <img src="" alt="Portfolio Logo">
+</div> -->
