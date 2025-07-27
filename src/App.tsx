@@ -3,9 +3,11 @@ import "./App.css"
 
 const App = () => {
   const { t } = useTranslation();
+
+
   return (
     <div className="center-align">
-      <div className="animate text-2xl ">
+      <div className="orange animate">
         {t("welcome")}
       </div>
     </div>

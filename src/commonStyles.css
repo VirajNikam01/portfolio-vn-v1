@@ -1,0 +1,325 @@
+:root {
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    :focus-visible {
+        outline: 1px solid var(--primary-color);
+    }
+}
+
+html:has(dialog[open]) {
+    overflow: hidden;
+}
+
+body {
+    --gray1: #fafafa;
+    --gray2: #f4f4f5;
+    --gray3: #e4e4e7;
+    --gray4: #d4d4d8;
+    --gray5: #d4d4d8;
+    --gray6: #71717a;
+    --gray7: #52525b;
+    --gray8: #3f3f46;
+    --gray9: #27272a;
+    --gray10: #18181b;
+
+    --is-dark: true;
+
+    &.light {
+        --gray1: #18181b;
+        --gray2: #27272a;
+        --gray3: #3f3f46;
+        --gray4: #52525b;
+        --gray5: #71717a;
+        --gray6: #d4d4d8;
+        --gray7: #d4d4d8;
+        --gray8: #e4e4e7;
+        --gray9: #f4f4f5;
+        --gray10: #fafafa;
+    }
+
+    --app-background: var(--gray10);
+    --input-background: var(--gray10);
+
+    /* banner colors  */
+    --orange: #f2994a;
+    --yellow: #f2c94c;
+    --green: #27ae60;
+
+    /* Primary & Accent color variations  */
+    --primary-color: #ff565a;
+
+    --border-radius: 0.5rem;
+    --border-width: 1px;
+
+    /* font variables  */
+    /* --font-family-headers: 'Montserrat', sans-serif !important; */
+    --font-family-headers: 'Poppins', sans-serif !important;
+    --font-family-text: 'Poppins', sans-serif !important;
+    --font-family-code:
+        source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+
+    /* font setup */
+    font-family: var(--font-family-text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-family: var(--font-family-headers);
+    }
+
+    code {
+        font-family: var(--font-family-code);
+    }
+
+    ::selection {
+        background-color: var(--gray8);
+    }
+
+    ::marker {
+        color: var(--primary-color);
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    .bold {
+        font-weight: bold !important;
+    }
+
+    .letterspacing-1 {
+        letter-spacing: 1px;
+    }
+
+    .letterspacing-2 {
+        letter-spacing: 2px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    /* Type  */
+    .h1 {
+        font-size: 2.75rem;
+    }
+    .h2 {
+        font-size: 2rem;
+        display: inline;
+        position: relative;
+    }
+    .h3 {
+        font-size: 1.5rem;
+    }
+    .h4 {
+        font-size: 1.25rem;
+    }
+
+    .body-text {
+        font-size: 1rem;
+    }
+
+    .default-text {
+        font-size: 1rem;
+    }
+
+    .label {
+        font-size: 0.875rem;
+    }
+
+    ul {
+        list-style: none !important;
+    }
+
+    ul > li {
+        text-decoration: none !important;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .primary-color {
+        color: var(--primary-color);
+        a {
+            color: var(--primary-color);
+        }
+    }
+
+    a:hover,
+    ul > li:hover {
+        color: var(--primary-color-dark) !important;
+        text-decoration: none;
+    }
+    ul > li a:hover {
+        color: var(--gray2) !important;
+    }
+
+    /* Colors  */
+    .gray1 .gray1 > a {
+        color: var(--gray1);
+    }
+
+    .gray2 .gray2 > a {
+        color: var(--gray2) !important;
+    }
+    .gray3 .gray3 > a {
+        color: var(--gray3);
+    }
+    .gray4 .gray4 > a {
+        color: var(--gray4) !important;
+    }
+    .gray5 .gray5 > a {
+        color: var(--gray5) !important;
+    }
+    .gray6 .gray6 > a {
+        color: var(--gray6) !important;
+    }
+    .gray7 .gray7 > a {
+        color: var(--gray7) !important;
+    }
+    .gray8 .gray8 > a {
+        color: var(--gray8) !important;
+    }
+    .gray9 .gray9 > a {
+        color: var(--gray9) !important;
+    }
+    .gray10 .gray10 > a {
+        color: var(--gray10) !important;
+    }
+
+    .orange {
+        color: var(--orange);
+    }
+    .yellow {
+        color: var(--yellow);
+    }
+    .green {
+        color: var(--green);
+    }
+
+    .dot {
+        height: 4px;
+        width: 4px;
+        display: inline-block;
+        border-radius: 50%;
+        background: var(--gray6);
+    }
+
+    input {
+        background-color: var(--gray9);
+
+        &:hover {
+            background-color: var(--gray8);
+        }
+
+        width: 100%;
+        border: 0;
+        height: 3rem;
+        padding: 0 1rem;
+        border-radius: var(--border-radius);
+        color: var(--gray1);
+        caret-color: var(--primary-color);
+        accent-color: var(--primary-color);
+
+        line-height: 1.5;
+    }
+
+    textarea {
+        background-color: var(--gray9);
+
+        &:hover {
+            background-color: var(--gray8);
+        }
+
+        width: 100%;
+        border: 0;
+        height: 6.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        color: var(--gray1);
+        caret-color: var(--primary-color);
+        accent-color: var(--primary-color);
+
+        line-height: 1.5;
+    }
+
+    .subsection-data + .subsection-data {
+        margin-top: 2rem;
+    }
+    .subsection-wrappers + .subsection-wrappers {
+        margin-top: 3rem;
+    }
+    .subsection {
+        padding-top: 2rem;
+    }
+    .subsection + .subsection {
+        margin-top: 4rem;
+    }
+    .subsection-title {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Width  */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+/* Track  */
+::-webkit-scrollbar-track {
+    background: var(--gray6);
+}
+
+/* Handle  */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Desktop  */
+@media (min-width: 1280px) and (max-width: 1791) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+/* Mobile  */
+@media (max-width: 1279px) {
+    body {
+        --border-width: 1px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)  */
+@media (max-width: 1200px) {
+    :root {
+        font-size: 13px;
+    }
+    .letterspacing-1 {
+        letter-spacing: 1px;
+    }
+    .letterspacing-2 {
+        letter-spacing: 2px;
+    }
+}
