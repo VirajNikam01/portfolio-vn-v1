@@ -69,7 +69,6 @@ jobs:
               run: npm test
 
     build:
-        # needs: [test, lint]
         needs: [test, lint]
         runs-on: ubuntu-latest
         steps:
@@ -89,3 +88,21 @@ jobs:
 
             - name: Build
               run: npm run build
+
+            - name: Deploy to Firebase Hosting (only on push to main)
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              uses: FirebaseExtended/action-hosting-deploy@v0
+              with:
+                  repoToken: ${{ secrets.GITHUB_TOKEN }}
+                  firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_VN_V1 }}
+                  channelId: live
+                  projectId: portfolio-vn-v1
+
+            - name: Deploy to Firebase Preview Channel (for development branch)
+              if: github.ref == 'refs/heads/development'
+              uses: FirebaseExtended/action-hosting-deploy@v0
+              with:
+                  repoToken: ${{ secrets.GITHUB_TOKEN }}
+                  firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_VN_V1 }}
+                  projectId: portfolio-vn-v1
+                  channelId: development
