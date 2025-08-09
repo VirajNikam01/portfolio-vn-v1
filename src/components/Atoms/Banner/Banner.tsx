@@ -1,3 +1,4 @@
+import React from 'react'
 import { useAlertBanner } from '../../../context/AlertBannerContext'
 import './Banner.css'
 

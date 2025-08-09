@@ -1,12 +1,23 @@
-export const fetchProfileData = async () => {
+import { child, get, getDatabase, ref } from 'firebase/database'
+import testProfileData from '../data/testData.json'
+import firebaseApp from './firebaseApp'
+
+export default async function fetchProfileData() {
     try {
-        const response = await fetch('/data/testData.json');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+        if (import.meta.env.MODE === 'development') {
+            console.log('Loading local data. Skipping the api call.')
+            return testProfileData
+        } else {
+            const dbRef = ref(getDatabase(firebaseApp))
+            const snapshot = await get(child(dbRef, '/'))
+            if (snapshot.exists()) {
+                return snapshot.val()
+            } else {
+                throw 'Api call failed.'
+            }
         }
-        return response;
-    } catch (error) {
-        console.error('Failed to fetch profile data:', error);
-        throw error; // Re-throw the error for further handling
+    } catch (err) {
+        console.log(err)
+        return testProfileData
     }
 }

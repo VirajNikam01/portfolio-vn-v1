@@ -82,7 +82,8 @@ export interface ProfileData {
     hobbies: Array<HobbyDetails>
     overview: Overview
     projects: Array<ProjectDetails>
-    skills: Skills
+    skills: Skills,
+    profileData?: any
 }
 
 export interface RecentArticle {
